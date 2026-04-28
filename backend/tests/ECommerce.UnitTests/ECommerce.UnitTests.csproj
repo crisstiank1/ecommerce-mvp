@@ -18,4 +18,9 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ECommerce.Application\ECommerce.Application.csproj" />
+    <ProjectReference Include="..\..\src\ECommerce.Domain\ECommerce.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

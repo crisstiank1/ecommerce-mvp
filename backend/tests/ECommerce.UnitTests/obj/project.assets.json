@@ -411,6 +411,29 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "ECommerce.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ECommerce.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ECommerce.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECommerce.Application.dll": {}
+        }
+      },
+      "ECommerce.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ECommerce.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECommerce.Domain.dll": {}
+        }
       }
     }
   },
@@ -932,10 +955,22 @@
         "xunit.runner.visualstudio.2.8.2.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "ECommerce.Application/1.0.0": {
+      "type": "project",
+      "path": "../../src/ECommerce.Application/ECommerce.Application.csproj",
+      "msbuildProject": "../../src/ECommerce.Application/ECommerce.Application.csproj"
+    },
+    "ECommerce.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../src/ECommerce.Domain/ECommerce.Domain.csproj",
+      "msbuildProject": "../../src/ECommerce.Domain/ECommerce.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "ECommerce.Application >= 1.0.0",
+      "ECommerce.Domain >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
@@ -973,7 +1008,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\CRISTIAN\\Desktop\\ecommerce-mvp\\backend\\src\\ECommerce.Application\\ECommerce.Application.csproj": {
+              "projectPath": "C:\\Users\\CRISTIAN\\Desktop\\ecommerce-mvp\\backend\\src\\ECommerce.Application\\ECommerce.Application.csproj"
+            },
+            "C:\\Users\\CRISTIAN\\Desktop\\ecommerce-mvp\\backend\\src\\ECommerce.Domain\\ECommerce.Domain.csproj": {
+              "projectPath": "C:\\Users\\CRISTIAN\\Desktop\\ecommerce-mvp\\backend\\src\\ECommerce.Domain\\ECommerce.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

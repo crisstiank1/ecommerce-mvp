@@ -33,6 +33,43 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "ECommerce.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ECommerce.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ECommerce.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECommerce.Application.dll": {}
+        }
+      },
+      "ECommerce.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ECommerce.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECommerce.Domain.dll": {}
+        }
+      },
+      "ECommerce.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ECommerce.Application": "1.0.0",
+          "ECommerce.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ECommerce.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECommerce.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -67,10 +104,27 @@
         "microsoft.openapi.1.6.17.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "ECommerce.Application/1.0.0": {
+      "type": "project",
+      "path": "../ECommerce.Application/ECommerce.Application.csproj",
+      "msbuildProject": "../ECommerce.Application/ECommerce.Application.csproj"
+    },
+    "ECommerce.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ECommerce.Domain/ECommerce.Domain.csproj",
+      "msbuildProject": "../ECommerce.Domain/ECommerce.Domain.csproj"
+    },
+    "ECommerce.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../ECommerce.Infrastructure/ECommerce.Infrastructure.csproj",
+      "msbuildProject": "../ECommerce.Infrastructure/ECommerce.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "ECommerce.Application >= 1.0.0",
+      "ECommerce.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.7"
     ]
   },
@@ -105,7 +159,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\CRISTIAN\\Desktop\\ecommerce-mvp\\backend\\src\\ECommerce.Application\\ECommerce.Application.csproj": {
+              "projectPath": "C:\\Users\\CRISTIAN\\Desktop\\ecommerce-mvp\\backend\\src\\ECommerce.Application\\ECommerce.Application.csproj"
+            },
+            "C:\\Users\\CRISTIAN\\Desktop\\ecommerce-mvp\\backend\\src\\ECommerce.Infrastructure\\ECommerce.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\CRISTIAN\\Desktop\\ecommerce-mvp\\backend\\src\\ECommerce.Infrastructure\\ECommerce.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
