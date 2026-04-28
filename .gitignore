@@ -1,0 +1,83 @@
+# -----------------------------
+# OS / Editor
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Visual Studio
+.vs/
+
+# -----------------------------
+# .NET / C#
+# -----------------------------
+**/bin/
+**/obj/
+**/out/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Test / coverage
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# Logs
+*.log
+
+# -----------------------------
+# Angular / Node
+# -----------------------------
+**/node_modules/
+**/.angular/
+**/dist/
+**/coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+**/.env
+**/.env.*
+!**/.env.example
+
+# -----------------------------
+# SQLite / local databases
+# -----------------------------
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# -----------------------------
+# App settings sensibles/locales
+# -----------------------------
+**/appsettings.Local.json
+**/appsettings.*.local.json
+**/appsettings.Production.json
+
+# -----------------------------
+# Generated / temp files
+# -----------------------------
+tmp/
+temp/
+*.tmp
+*.cache
+
+# -----------------------------
+# Optional: package locks
+# Deja solo el que uses.
+# Si usarás npm, NO ignores package-lock.json.
+# Si usarás pnpm, NO ignores pnpm-lock.yaml.
+# Si usarás yarn, NO ignores yarn.lock.
+# -----------------------------
